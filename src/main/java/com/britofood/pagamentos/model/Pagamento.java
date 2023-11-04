@@ -20,6 +20,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 public class Pagamento {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -28,19 +29,15 @@ public class Pagamento {
     @Positive
     private BigDecimal valor;
 
-    @NotBlank
     @Size(max = 100)
     private String nome;
 
-    @NotBlank
     @Size(max = 19)
     private String numero;
 
-    @NotBlank
     @Size(max=7)
     private String expiracao;
 
-    @NotBlank
     @Size(max=7)
     private String codigo;
 
@@ -50,6 +47,7 @@ public class Pagamento {
 
     @NotNull
     private Long pedidoId;
+
     @NotNull
     private Long formaDePagamentoId;
 }
